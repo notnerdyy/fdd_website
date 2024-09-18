@@ -1,0 +1,144 @@
+@use '@/styles' as s;
+
+.foo {
+  background-color: s.$tint4;
+  padding-block: 0 5rem;
+  @include s.rwd-above('md') {
+    padding-block: 0;
+  }
+  @include s.rwd-above('lg') {
+    padding-block: 4.75rem;
+  }
+}
+.fooBody {
+  // height: 302px;
+  background-color: s.$primary;
+  border-radius: 0;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include s.rwd-above('lg') {
+    border-radius: 80px 80px 80px 0;
+  }
+}
+
+.logoWrap {
+  width: 200px;
+  @include s.rwd-above('lg') {
+    width: 300px;
+  }
+}
+
+.fooL {
+  @extend .gr-center;
+  margin-bottom: 3rem;
+  @include s.rwd-above('lg') {
+    margin-bottom: 0;
+    display: block;
+  }
+}
+.copyright {
+  @include s.ff-noto(10px, 18px);
+  line-height: 30px;
+  color: s.$shade2;
+  margin-top: 40px;
+  @include s.rwd-above('lg') {
+    margin-top: 20px;
+  }
+}
+
+.fooR {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include s.rwd-above('lg') {
+    flex-direction: row;
+    align-items: start;
+    max-width: 640px;
+  }
+  & > div {
+    display: flex;
+    flex-direction: column;
+    @include s.rwd-above('lg') {
+      flex-direction: row;
+      align-items: start;
+    }
+  }
+  h3 {
+    padding-block: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: s.$shade2;
+    letter-spacing: 5px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    align-items: center;
+    @include s.rwd-above('lg') {
+      padding-block: 0;
+      margin-top: 4px;
+      display: block;
+      margin-right: 0.75rem;
+      writing-mode: vertical-rl;
+    }
+  }
+  ul {
+    padding-block: 1rem;
+    width: 100%;
+    @include s.rwd-above('lg') {
+      margin-right: 100px;
+    }
+  }
+  &:last-child ul {
+    margin-right: 0;
+  }
+
+  li {
+    background-color: s.$tint5;
+    padding-block: 0.5rem;
+    margin-bottom: 12px;
+    text-align: center;
+    color: s.$tint5;
+    border-radius: 99rem;
+
+    @include s.rwd-above('lg') {
+      border-radius: initial;
+      background-color: transparent;
+      padding-block: 0;
+      min-width: 7rem;
+      color: s.$shade4;
+    }
+  }
+  a {
+    display: block;
+    width: 100%;
+    line-height: 1.25;
+    @include s.ff-noto(1rem);
+    @include s.rwd-above('lg') {
+      line-height: 12px;
+    }
+  }
+}
+
+.ulIcon {
+  @include s.circle-of(1.5rem);
+  margin-right: 0.5rem;
+  display: inline-grid;
+  place-content: center;
+  background-color: transparent;
+  color: s.$white;
+  border: 1px solid s.$white;
+  font-size: 0.75rem;
+}
+.plusIcon {
+  width: 1rem;
+  height: 1rem;
+  display: grid;
+  place-content: center;
+  background-color: transparent;
+  color: s.$shade3;
+  font-size: 2rem;
+}
