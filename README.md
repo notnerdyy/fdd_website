@@ -15,7 +15,7 @@ Fundodo是全方位的寵物平台，集結商品販售、寵物旅館搜尋、�
 
 <hr>
 
-![操作演示](https://imgur.com/bQ2584X)
+![操作演示](https://imgur.com/bQ2584X.gif)
 
 
 <hr>
